@@ -6,6 +6,7 @@ function buggyFunction(userInput) {
   eval(userInput);
 
   // Bug: undefined variable
+  let notDefinedVar = 0;
   let result = notDefinedVar + 1;
 
   // Bug: possible division by zero
