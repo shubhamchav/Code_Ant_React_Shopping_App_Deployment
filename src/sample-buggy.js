@@ -14,7 +14,9 @@ function buggyFunction(userInput) {
   let division = 10 / divisor;
 
   // Vulnerability: hardcoded credentials
-  const password = "123456";
+  const password =
+    (typeof process !== 'undefined' ? process.env.APP_PASSWORD : undefined) ??
+    '';
 
   return result + division + password;
 }
