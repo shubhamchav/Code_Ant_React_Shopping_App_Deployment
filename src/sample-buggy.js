@@ -26,3 +26,5 @@ function unusedFunction() {
   // This function is never called
   return 'unused';
 }
+
+module.exports = { buggyFunction, unusedFunction };
